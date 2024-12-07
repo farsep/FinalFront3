@@ -32,10 +32,18 @@ const ElementCard: React.FC<ElementCardProps> = ({ element }) => {
             <p className={styles.atomicNumber}>Atomic Number: {element.atomic_number}</p>
             <p className={styles.atomicWeight}>Atomic Weight: {element.atomic_weight}</p>
             <p className={styles.category}>Category: {element.category}</p>
-            <button onClick={handleFavoriteToggle}>
+            <button
+                className={`${styles.button} ${isFavorite ? styles.favoriteButton : ''}`}
+                onClick={handleFavoriteToggle}
+            >
                 {isFavorite ? "Remove Favorite" : "Add to Favorites"}
             </button>
-            <button onClick={() => navigate(`/table/${element.symbol}`, { state: { element } })}>Details</button>
+            <button
+                className={styles.button}
+                onClick={() => navigate(`/table/${element.symbol}`, { state: { element } })}
+            >
+                Details
+            </button>
         </div>
     );
 };
