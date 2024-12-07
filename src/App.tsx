@@ -5,6 +5,7 @@ import { FavoritesProvider } from "./context/FavoritesContext";
 import Navbar from "./components/Navbar";
 import TablePage from "./pages/TablePage";
 import FavoritesPage from "./pages/FavoritesPage";
+import ContactPage from "./pages/ContactPage";
 
 const App: React.FC = () => {
     return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
                     <Route path="/table" element={<TablePage />} />
                     <Route path="/favorites" element={<FavoritesPage />} />
                     <Route path="/table/:symbol" element={<TablePage />} />
+                    <Route path="/contact" element={<ContactPage />} />
                 </Routes>
             </Router>
         </FavoritesProvider>

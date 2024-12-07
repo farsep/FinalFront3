@@ -1,5 +1,4 @@
 // src/components/ElementCard.tsx
-import React, { useState } from "react";
 import { useFavorites } from "../context/FavoritesContext";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/ElementCard.module.css";
@@ -21,6 +20,7 @@ const ElementCard: React.FC<ElementCardProps> = ({ element }) => {
     const isFavorite = favorites.includes(element.symbol);
 
     const handleFavoriteToggle = () => {
+// sourcery skip: use-braces
         if (isFavorite) removeFavorite(element.symbol);
         else addFavorite(element.symbol);
     };

@@ -10,6 +10,7 @@ const Navbar: React.FC = () => {
     return (
         <nav className={styles.navbar}>
             <Link to="/table" className={styles.link}>Table</Link>
+            <Link to="/contact" className={styles.link}>Contact</Link>
             <Link to="/favorites" className={styles.link}>
                 Favorites <span className={styles.bubble}>{favorites.length}</span>
             </Link>
