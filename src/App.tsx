@@ -1,5 +1,6 @@
+// src/App.tsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { FavoritesProvider } from "./context/FavoritesContext";
 import Navbar from "./components/Navbar";
 import TablePage from "./pages/TablePage";
@@ -11,6 +12,7 @@ const App: React.FC = () => {
             <Router>
                 <Navbar />
                 <Routes>
+                    <Route path="/" element={<Navigate to="/table" />} />
                     <Route path="/table" element={<TablePage />} />
                     <Route path="/favorites" element={<FavoritesPage />} />
                     <Route path="/table/:symbol" element={<TablePage />} />

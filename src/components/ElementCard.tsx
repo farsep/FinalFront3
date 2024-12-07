@@ -35,7 +35,7 @@ const ElementCard: React.FC<ElementCardProps> = ({ element }) => {
             <button onClick={handleFavoriteToggle}>
                 {isFavorite ? "Remove Favorite" : "Add to Favorites"}
             </button>
-            <button onClick={() => navigate(`/table/${element.symbol}`)}>Details</button>
+            <button onClick={() => navigate(`/table/${element.symbol}`, { state: { element } })}>Details</button>
         </div>
     );
 };
